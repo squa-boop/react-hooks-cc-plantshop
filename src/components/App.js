@@ -16,7 +16,7 @@ function App() {
 
   
   useEffect(() => {
-    fetch('https://react-hooks-cc-plantshop-1-f4d2.onrender.com/plants')
+    fetch('https://react-hooks-cc-plantshop-2-fh12.onrender.com/plants')
       .then(response => response.json())
       .then(data => setPlants(data))
       .catch(error => console.error('Error fetching plants:', error));
@@ -37,7 +37,7 @@ function App() {
       return;
     }
 
-    fetch('https://react-hooks-cc-plantshop-1-f4d2.onrender.com/plants', {
+    fetch('https://react-hooks-cc-plantshop-2-fh12.onrender.com/plants', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ function App() {
     const updatedPlant = plants.find(plant => plant.id === id);
     updatedPlant.soldOut = !updatedPlant.soldOut; 
 
-    fetch(`https://react-hooks-cc-plantshop-1-f4d2.onrender.com/${id}`, {
+    fetch(`https://react-hooks-cc-plantshop-2-fh12.onrender.com/plants'/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ function App() {
 
   
   function handleDeletePlant(id) {
-    fetch(`https://react-hooks-cc-plantshop-1-f4d2.onrender.coms/${id}`, {
+    fetch(`https://react-hooks-cc-plantshop-2-fh12.onrender.com/plants'/${id}`, {
       method: 'DELETE',
     })
       .then(() => {

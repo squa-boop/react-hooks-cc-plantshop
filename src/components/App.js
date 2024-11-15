@@ -62,7 +62,7 @@ function App() {
     const updatedPlant = plants.find(plant => plant.id === id);
     updatedPlant.soldOut = !updatedPlant.soldOut; 
 
-    fetch(`https://react-hooks-cc-plantshop-2-fh12.onrender.com/plants'/${id}`, {
+    fetch(`https://react-hooks-cc-plantshop-2-fh12.onrender.com/plants/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ function App() {
 
   
   function handleDeletePlant(id) {
-    fetch(`https://react-hooks-cc-plantshop-2-fh12.onrender.com/plants'/${id}`, {
+    fetch(`https://react-hooks-cc-plantshop-2-fh12.onrender.com/plants/${id}`, {
       method: 'DELETE',
     })
       .then(() => {
